@@ -15,3 +15,17 @@ function initChangeFormContent() {
 }
 
 initChangeFormContent()
+
+function initDrawIcon() {
+  const sendIcon = document.querySelector('.send-icon')
+
+  if (sendIcon) {
+    function drawIcon() {
+      sendIcon.classList.toggle('active')
+    }
+
+    window.addEventListener('load', drawIcon)
+  }
+}
+
+initDrawIcon()
