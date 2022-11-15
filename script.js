@@ -1,14 +1,16 @@
 function initChangeFormContent() {
-  const btnForm = document.querySelector('form button')
+  const form = document.querySelector('form')
   const fieldsForm = document.querySelector('form > div')
 
-  if (btnForm && fieldsForm) {
-    function changeFormContent() {
+  if (form && fieldsForm) {
+    function changeFormContent(event) {
+      event.preventDefault()
+
       fieldsForm.outerHTML =
         '<p style="color: hsl(148, 92%, 39%)">Parabéns, você irá receber a nossa Newsletter pelo e-mail cadastrado!</p>'
     }
 
-    btnForm.addEventListener('click', changeFormContent)
+    form.addEventListener('submit', changeFormContent)
   }
 }
 
